@@ -1,0 +1,59 @@
+@import 'fonts.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply bg-white;
+    /* text-rendering: optimizeLegibility; */
+    /* -webkit-font-smoothing: subpixel-antialiased; */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.router-link-exact-active,
+.linkActive {
+    transform: skewX(-10deg);
+}
+
+@layer base {
+    h2 {
+        @apply font-sans text-6xl uppercase tracking-tight;
+    }
+
+    h3 {
+        @apply font-sans text-3xl uppercase tracking-tight;
+    }
+
+    p {
+        @apply font-serif text-xl;
+    }
+
+    a {
+        transition: transform 0.3s, font-weight 0.2s ease-in-out;
+    }
+
+    a:hover {
+        background-color: rgb(255, 0, 85);
+        font-weight: 400;
+        transform: skewX(-10deg);
+    }
+
+    a:active {
+        transition: font-weight 0.1s ease-in-out;
+        font-weight: 300;
+    }
+
+    a::before {
+        display: block;
+        content: attr(title);
+        font-weight: 500;
+        height: 0;
+        overflow: hidden;
+        visibility: hidden;
+    }
+}
+
+@layer components {
+}
