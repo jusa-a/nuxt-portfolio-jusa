@@ -4,6 +4,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    /* --header-size: clamp(4rem, 10vw, 11vw); */
+    --header-size: clamp(10vw, 4.5rem, 17vw);
+}
+
 body {
     @apply bg-white;
     /* text-rendering: optimizeLegibility; */
@@ -18,16 +23,27 @@ body {
 }
 
 @layer base {
+    h1 {
+        @apply font-sans uppercase tracking-tight;
+        font-size: clamp(2.5rem, 6vw, 12rem);
+        line-height: 1;
+    }
+
     h2 {
         @apply font-sans text-6xl uppercase tracking-tight;
+        font-size: clamp(1.7rem, 4.2vw, 10rem);
+        line-height: 0.825;
     }
 
     h3 {
-        @apply font-sans text-3xl uppercase tracking-tight;
+        @apply font-sans uppercase tracking-tight;
+        font-size: clamp(3rem, 4vw, 15rem);
+        line-height: 1;
     }
 
     p {
-        @apply font-serif text-xl;
+        @apply font-serif;
+        font-size: clamp(1rem, 1.3vw, 2rem);
     }
 
     a {
@@ -36,7 +52,7 @@ body {
 
     a:hover {
         background-color: rgb(255, 0, 85);
-        font-weight: 400;
+        font-weight: 500;
         transform: skewX(-10deg);
     }
 
@@ -56,4 +72,13 @@ body {
 }
 
 @layer components {
+    .p1 {
+        font-size: clamp(1rem, 1.9vw, 3rem);
+    }
+
+    .link {
+        @apply font-light underline;
+        font-size: clamp(1.2rem, 1.8vw, 3rem);
+        line-height: 1.2;
+    }
 }

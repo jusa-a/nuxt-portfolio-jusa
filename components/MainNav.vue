@@ -1,22 +1,18 @@
 <template>
 
     <div class="mainNavContainer">
-        <nav class="mainNav flex justify-end">
-            <ul class="flex gap-4 flex-col">
-                <li @click="showAbout = !showAbout">
-                    <a href="#"
-                       :class="expanded"
-                       title="about">about</a>
-                </li>
-                <li>
-                    <NuxtLink to="/projects"
-                              title="projects">projects</NuxtLink>
-                </li>
-                <li>
-                    <NuxtLink to="/works"
-                              title="works">works</NuxtLink>
-                </li>
-            </ul>
+        <nav class="mainNav flex justify-between">
+            <a :class="expanded"
+               class="navLink"
+               @click="showAbout = !showAbout"
+               title="about">about</a>
+            <a href="#projects"
+               class="navLink"
+               title="projects">projects</a>
+            <a href="#works"
+               class="navLink"
+               title="works">works</a>
+
         </nav>
     </div>
 
@@ -27,14 +23,14 @@
 </template>
 
 <script setup>
-    const showAbout = ref(false)
+const showAbout = ref(false)
 
-    const expanded = computed(() => {
-        return {
-            linkActive: showAbout.value
-        }
+const expanded = computed(() => {
+    return {
+        linkActive: showAbout.value
     }
-    )
+}
+)
 </script>
 
 
@@ -48,18 +44,20 @@
         color: #fff;
     }
 
-    .mainNav a {
-        @apply font-sans text-6xl text-center uppercase font-light tracking-tight;
+    .navLink {
+        @apply font-sans text-center uppercase tracking-tight;
         display: inline-block;
+        font-size: clamp(1.6rem, 3.2vw, 7rem);
+        line-height: 0.825;
     }
 
-    .mainNav a:hover {
-        font-weight: 400;
+    .navLink:hover {
+        font-weight: 500;
     }
 
-    .mainNav a:active {
+    .navLink:active {
         transition: font-weight 0.1s ease-in-out;
-        font-weight: 300;
+        font-weight: normal;
     }
 
     .about-enter-active,

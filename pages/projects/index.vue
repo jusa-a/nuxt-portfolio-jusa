@@ -1,10 +1,11 @@
 <template>
     <div>
-        <div class="">
-            <div v-for="p in projects">
-                <ProjectCard :project="p" />
-            </div>
-        </div>
+        <h2>
+            Projects
+        </h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum molestias eligendi iusto similique soluta esse, doloremque placeat laudantium magni consequatur nobis fugiat ad quam quas quisquam tenetur, delectus deleniti eos eaque veritatis? Voluptate, soluta recusandae exercitationem facilis doloremque quam fugiat qui inventore, veritatis nihil perspiciatis itaque sapiente. Esse praesentium suscipit itaque incidunt, nemo quisquam fugit excepturi recusandae consequatur illum!
+        </p>
     </div>
 </template>
 
@@ -12,14 +13,6 @@
     /* definePageMeta({
         layout: 'projects'
     }) */
-
-    const projects = [
-        {
-            title: "project for testing",
-            content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem laborum qui dignissimos tempore perspiciatis, officiis maiores a deserunt eveniet doloremque.",
-            id: 1
-        }
-    ]
 
     useHead({
         title: 'Jusa Annevirta | Projects'
