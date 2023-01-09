@@ -7,8 +7,8 @@
         </div>
         <div class="heroImageContainer flex justify-center">
             <img class="aspect-[5/6] shrink-0"
-                 src=""
-                 alt="">
+                 src="~/assets/img/portrait.jpeg"
+                 alt="portrait of me">
         </div>
         <div class="heroText flex justify-center">
             <p class="p1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur nisi sequi optio hic vero incidunt sed explicabo quasi, aperiam natus!</p>
@@ -21,9 +21,10 @@
         <div class="projectsDesc">
             <p class="p1">Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</p>
         </div>
+
         <div>
 
-            <div class="projectCard right flex">
+            <div class="projectCard flex">
                 <img class="projectThumb aspect-[4/3]" />
                 <div class="projectDetails flex flex-col justify-between">
                     <div>
@@ -66,10 +67,76 @@
         </div>
     </div>
 
-    <div class="worksContainer min-h-screen"
+    <div class="worksContainer flex flex-col"
          id="works">
         <h1>Works</h1>
-        <div>
+        <div class="worksDesc text-end self-end">
+            <p class="p1">Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</p>
+        </div>
+
+        <div class="flex flex-wrap justify-between items-center gap-[5vw]">
+
+
+
+            <div class="workCard">
+                <img class="workThumb aspect-[4/3]" />
+                <div class="workDetails flex justify-between">
+                    <div>
+                        <p class="font-sans font-light italic leading-none">
+                            2022
+                        </p>
+                    </div>
+                    <h3 class="workTitle text-end">
+                        work of mine
+                    </h3>
+                </div>
+            </div>
+
+            <div class="workCard">
+                <img class="workThumb aspect-[1/1]" />
+                <div class="workDetails flex justify-between">
+                    <div>
+                        <p class="font-sans font-light italic leading-none">
+                            2022
+                        </p>
+                    </div>
+                    <h3 class="workTitle text-end">
+                        another work
+                    </h3>
+                </div>
+            </div>
+
+            <div class="workCard">
+                <img class="workThumb aspect-[5/7]" />
+                <div class="workDetails flex justify-between">
+                    <div>
+                        <p class="font-sans font-light italic leading-none">
+                            2022
+                        </p>
+                    </div>
+                    <h3 class="workTitle text-end">
+                        older works
+                    </h3>
+                </div>
+            </div>
+
+            <div class="workCard">
+                <img class="workThumb aspect-[9/11]" />
+                <div class="workDetails flex justify-between">
+                    <div>
+                        <p class="font-sans font-light italic leading-none">
+                            2022
+                        </p>
+                    </div>
+                    <h3 class="workTitle text-end">
+                        some other work
+                    </h3>
+                </div>
+            </div>
+
+
+
+
 
         </div>
     </div>
@@ -83,7 +150,7 @@
 <style scoped>
     .heroContainer {
         /* margin-top: calc(28vw + 7vh); */
-        margin: clamp(64px, 22vh, 300px) auto 50px;
+        margin: clamp(64px, 22vh, 300px) auto 15vw;
     }
 
     .mainHeaderContainer h1 {
@@ -117,38 +184,53 @@
 
     .heroImageContainer>img {
         position: relative;
+        object-fit: cover;
         /* right: 15.5vw; */
         /* right: calc(1.5 * var(--header-size)); */
         right: clamp(15.5vw, 90px, 28vw);
         /* width: calc(4.54 * var(--header-size)); */
-        width: clamp(45vw, 20rem, 100vw);
-
-        background-color: rgb(94, 94, 94);
+        width: clamp(45vw, 20rem, 90vw);
+        background-color: #c2c2c2;
     }
+
 
     .projectsContainer,
     .worksContainer {
-        padding-top: 20vw;
+        padding: 10vw 0 10vw;
         margin: auto;
         width: clamp(70%, 500px, 100vw);
     }
 
-    .projectsDesc {
+    .projectsDesc,
+    .worksDesc {
         width: clamp(49%, 380px, 100vw);
     }
 
     .projectCard {
         margin: 5vw 0 10vw;
-        /* width: clamp(200px, 50%, 1000px); */
     }
 
-    .projectCard.right {
+    .projectCard:nth-child(odd) {
         @apply flex-row-reverse text-right;
+    }
+
+    .workCard {
+        max-width: 300px;
+    }
+
+    .workCard:nth-child(even) {
+        margin-left: auto;
     }
 
     .projectThumb {
         width: clamp(35vw, 300px, 100vw);
-        background-color: rgb(94, 94, 94);
+        background-color: #c2c2c2;
+        object-fit: cover;
+    }
+
+    .workThumb {
+        width: clamp(35vw, 300px, 100vw);
+        background-color: #c2c2c2;
         object-fit: cover;
     }
 

@@ -10,7 +10,10 @@
 }
 
 body {
-    @apply bg-white;
+    background-color: #f9f9f9;
+    color: #353535;
+    overflow-y: scroll;
+    overflow-x: hidden;
     /* text-rendering: optimizeLegibility; */
     /* -webkit-font-smoothing: subpixel-antialiased; */
     -webkit-font-smoothing: antialiased;
@@ -27,18 +30,21 @@ body {
         @apply font-sans uppercase tracking-tight;
         font-size: clamp(2.5rem, 6vw, 12rem);
         line-height: 1;
+        padding-right: 0.025em;
     }
 
     h2 {
         @apply font-sans text-6xl uppercase tracking-tight;
         font-size: clamp(1.7rem, 4.2vw, 10rem);
         line-height: 0.825;
+        padding-right: 0.025em;
     }
 
     h3 {
         @apply font-sans uppercase tracking-tight;
-        font-size: clamp(3rem, 4vw, 15rem);
+        font-size: clamp(1.3rem, 3.1vw, 7rem);
         line-height: 1;
+        padding-right: 0.025em;
     }
 
     p {
@@ -78,6 +84,7 @@ body {
 
     .link {
         @apply font-light underline;
+        text-decoration-thickness: from-font;
         font-size: clamp(1.2rem, 1.8vw, 3rem);
         line-height: 1.2;
     }
