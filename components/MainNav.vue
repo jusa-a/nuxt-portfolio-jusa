@@ -23,14 +23,14 @@
 </template>
 
 <script setup>
-const showAbout = ref(false)
+    const showAbout = ref(false)
 
-const expanded = computed(() => {
-    return {
-        linkActive: showAbout.value
+    const expanded = computed(() => {
+        return {
+            linkActive: showAbout.value
+        }
     }
-}
-)
+    )
 </script>
 
 
@@ -38,8 +38,9 @@ const expanded = computed(() => {
     .mainNavContainer {
         position: -webkit-sticky;
         position: sticky;
-        top: 5px;
+        top: 0px;
         z-index: 999;
+        overflow: hidden;
         mix-blend-mode: difference;
         color: #fff;
     }
