@@ -9,6 +9,10 @@
     --header-size: clamp(10vw, 4.5rem, 17vw);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #f9f9f9;
     color: #353535;
@@ -18,11 +22,6 @@ body {
     /* -webkit-font-smoothing: subpixel-antialiased; */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-}
-
-.router-link-exact-active,
-.linkActive {
-    transform: skewX(-10deg);
 }
 
 @layer base {
@@ -52,19 +51,19 @@ body {
         font-size: clamp(1rem, 1.3vw, 2rem);
     }
 
-    a {
+    a,
+    button {
         transition: transform 0.3s, font-weight 0.2s ease-in-out;
     }
 
     a:hover {
-        background-color: rgb(255, 0, 85);
+        /* background-color: rgb(255, 0, 85); */
         font-weight: 500;
-        transform: skewX(-10deg);
     }
 
     a:active {
         transition: font-weight 0.1s ease-in-out;
-        font-weight: 300;
+        font-weight: normal;
     }
 
     a::before {
@@ -87,5 +86,6 @@ body {
         text-decoration-thickness: from-font;
         font-size: clamp(1.2rem, 1.8vw, 3rem);
         line-height: 1.2;
+        transform: skewX(-10deg);
     }
 }

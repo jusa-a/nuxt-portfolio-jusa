@@ -10,9 +10,10 @@ export default defineNuxtConfig({
             meta: [
                 {
                     name: 'description',
-                    content: 'Portfolio Jusa',
-                },
+                    content: 'Portfolio Jusa'
+                }
             ],
-        },
-    },
+            link: [{ rel: 'icon', href: '#' }]
+        }
+    }
 })

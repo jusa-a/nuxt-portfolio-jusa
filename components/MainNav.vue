@@ -1,25 +1,25 @@
 <template>
-
     <div class="mainNavContainer">
         <nav class="mainNav flex justify-between">
-            <a :class="expanded"
-               class="navLink"
-               @click="showAbout = !showAbout"
-               title="about">about</a>
-            <a href="#projects"
-               class="navLink"
-               title="projects">projects</a>
-            <a href="#works"
-               class="navLink"
-               title="works">works</a>
-
+            <button
+                :class="expanded"
+                class="navLink"
+                title="about"
+                @click="showAbout = !showAbout">
+                about
+            </button>
+            <NuxtLink to="/#projects" class="navLink" title="projects">
+                projects
+            </NuxtLink>
+            <NuxtLink to="/#works" class="navLink" title="works">
+                works
+            </NuxtLink>
         </nav>
     </div>
 
     <transition name="about">
-        <About v-show="showAbout"></About>
+        <About v-show="showAbout" />
     </transition>
-
 </template>
 
 <script setup>
@@ -29,16 +29,14 @@
         return {
             linkActive: showAbout.value
         }
-    }
-    )
+    })
 </script>
-
 
 <style scoped>
     .mainNavContainer {
         position: -webkit-sticky;
         position: sticky;
-        top: 0px;
+        top: 0.1vw;
         z-index: 999;
         overflow: hidden;
         mix-blend-mode: difference;
@@ -54,11 +52,16 @@
 
     .navLink:hover {
         font-weight: 500;
+        transform: skewX(-10deg);
     }
 
     .navLink:active {
         transition: font-weight 0.1s ease-in-out;
         font-weight: normal;
+    }
+
+    .linkActive {
+        transform: skewX(-10deg);
     }
 
     .about-enter-active,
@@ -69,7 +72,6 @@
     .about-enter-from,
     .about-leave-to {
         transform: translateX(100%);
-        transition: all 150ms ease-in 0s
+        transition: all 150ms ease-in 0s;
     }
-
 </style>
