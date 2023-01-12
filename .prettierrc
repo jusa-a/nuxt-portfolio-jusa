@@ -2,7 +2,10 @@
     "tabWidth": 4,
     "semi": false,
     "singleQuote": true,
-    "jsxSingleQuote": true,
     "printWidth": 80,
+    "bracketSameLine": true,
+    "htmlWhitespaceSensitivity": "ignore",
+    "trailingComma": "none",
+    "arrowParens": "avoid",
     "vueIndentScriptAndStyle": true
 }
