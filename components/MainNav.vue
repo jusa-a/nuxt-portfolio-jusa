@@ -1,6 +1,6 @@
 <template>
-    <div class="mainNavContainer">
-        <nav class="mainNav flex justify-between">
+    <nav class="mainNavContainer">
+        <div class="mainNav flex justify-between">
             <button
                 :class="expanded"
                 class="navLink"
@@ -14,8 +14,8 @@
             <NuxtLink to="/#works" class="navLink" title="works">
                 works
             </NuxtLink>
-        </nav>
-    </div>
+        </div>
+    </nav>
 
     <transition name="about">
         <About v-show="showAbout" />
@@ -50,9 +50,11 @@
         line-height: 0.825;
     }
 
-    .navLink:hover {
-        font-weight: 500;
-        transform: skewX(-10deg);
+    @media (hover: hover) {
+        .navLink:hover {
+            font-weight: 500;
+            transform: skewX(-10deg);
+        }
     }
 
     .navLink:active {

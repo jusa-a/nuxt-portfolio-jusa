@@ -14,9 +14,7 @@
 </template>
 
 <script setup>
-    const props = defineProps({
-        error: Object
-    })
+    defineProps(['error'])
 
     const handleError = () => clearError({ redirect: '/' })
 </script>

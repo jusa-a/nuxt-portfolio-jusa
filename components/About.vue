@@ -1,6 +1,6 @@
 <template>
-    <div class="aboutContainer flex flex-col justify-around">
-        <div class="spacer"></div>
+    <section class="aboutContainer flex flex-col justify-around">
+        <div class="spacer bg-transparent"></div>
 
         <div>
             <p>
@@ -55,7 +55,7 @@
                 <p><span>+358 44 252 7741</span></p>
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <script setup></script>
@@ -73,14 +73,11 @@
         top: 0;
         right: 0;
         padding-right: 3em;
-        /* padding-left: 0.5em; */
+        background-color: #5cff1ade;
+        padding-left: 0.5em;
     }
 
-    /* .aboutContainer > div {
-        backdrop-filter: blur(10px);
-    } */
-
-    span {
+    /* span {
         background-color: #f9f9f9;
-    }
+    } */
 </style>

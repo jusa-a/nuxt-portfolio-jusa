@@ -3,7 +3,12 @@ title: Another work
 description: Description about the work
 img: 'img/img4.jpg'
 year: '2022'
+images:
+    - img/img3.jpg
+    - img/img1.jpg
 ---
+
+<image-container :images="images"></image-container>
 
 ## Description about the work
 

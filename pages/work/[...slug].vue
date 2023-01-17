@@ -1,35 +1,35 @@
 <template>
     <!-- render document coming from the query -->
-    <ContentRenderer :value="project">
-        <Article :article="project" />
+    <ContentRenderer :value="work">
+        <Article :article="work" />
     </ContentRenderer>
 </template>
 
 <script setup>
     // fetch document where the document path matches with the current route
     const { path } = useRoute()
-    const { data: project } = await useAsyncData(`content-${path}`, () =>
+    const { data: work } = await useAsyncData(`content-${path}`, () =>
         queryContent(path).findOne()
     )
 
     // throw error page if document not found
-    if (!project.value) {
+    if (!work.value) {
         throw createError({
             statusCode: 404,
-            statusMessage: 'Project not found',
+            statusMessage: 'Work not found',
             fatal: true
         })
     }
 
     // set meta
     useHead({
-        title: `Jusa | ${project.value.title}`,
+        title: `Jusa | ${work.value.title}`,
         meta: [
-            { name: 'description', content: project.value.description }
+            { name: 'description', content: work.value.description }
             /* {
                 hid: 'og:image',
                 property: 'og:image',
-                content: process.env.baseUrl + project.value.img
+                content: process.env.baseUrl + work.value.img
             } */
         ]
     })
