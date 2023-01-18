@@ -8,8 +8,7 @@
             <div class="articleHero">
                 <div class="flex flex-row-reverse">
                     <div class="heroImg">
-                        <nuxt-img
-                            format="webp"
+                        <img
                             :src="`/${article.img}`"
                             :alt="article.title"
                             class="object-cover w-[100%]" />

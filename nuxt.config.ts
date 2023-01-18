@@ -1,6 +1,6 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-    modules: ['@nuxt/content', '@nuxtjs/tailwindcss', '@nuxt/image-edge'],
+    modules: ['@nuxt/content', '@nuxtjs/tailwindcss'],
     content: {
         // https://content.nuxtjs.org/api/configuration
     },
@@ -13,10 +13,7 @@ export default defineNuxtConfig({
                     content: 'Portfolio Jusa'
                 }
             ],
-            link: [{ rel: 'icon', href: '#' }],
-            htmlAttrs: {
-                lang: 'en'
-            }
+            link: [{ rel: 'icon', href: '#' }]
         }
     }
 })

@@ -16,8 +16,7 @@
             <div class="flex flex-wrap justify-between items-center gap-[4vw]">
                 <template v-for="work in list" :key="work._path">
                     <NuxtLink :to="work._path" class="workCard">
-                        <nuxt-img
-                            format="webp"
+                        <img
                             :src="`/${work.img}`"
                             :alt="work.title"
                             class="workThumb" />

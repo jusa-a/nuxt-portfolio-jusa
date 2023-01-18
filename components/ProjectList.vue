@@ -17,8 +17,7 @@
                 <template v-for="project in list" :key="project._path">
                     <NuxtLink :to="project._path" class="projectCard flex">
                         <div class="projectThumb">
-                            <nuxt-img
-                                format="webp"
+                            <img
                                 :src="`/${project.img}`"
                                 :alt="project.title"
                                 class="object-cover w-[100%]" />

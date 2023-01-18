@@ -5,8 +5,7 @@
             <h1 class="text-right grow ml-[8vw]">Annevirta</h1>
         </div>
         <div class="heroImageContainer flex justify-center">
-            <nuxt-img
-                format="webp"
+            <img
                 class="aspect-[5/6] shrink-0"
                 alt="portrait of me"
                 src="/img/portrait.jpeg" />
