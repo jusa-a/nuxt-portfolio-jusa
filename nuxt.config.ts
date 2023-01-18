@@ -13,7 +13,10 @@ export default defineNuxtConfig({
                     content: 'Portfolio Jusa'
                 }
             ],
-            link: [{ rel: 'icon', href: '#' }]
+            link: [{ rel: 'icon', href: '#' }],
+            htmlAttrs: {
+                lang: 'en'
+            }
         }
     }
 })
