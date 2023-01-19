@@ -30,7 +30,7 @@
                 </div>
             </div>
             <section class="articleContent">
-                <ContentRendererMarkdown :value="article" />
+                <ContentRenderer :value="article" />
             </section>
         </div>
     </article>
@@ -47,11 +47,12 @@
     .articleTitle {
         color: #fff;
         mix-blend-mode: difference;
-        width: clamp(75%, 400px, 100vw);
+        width: clamp(70%, 400px, 100vw);
         margin: auto;
     }
 
     .articleTitle > h1 {
+        font-size: clamp(2.9rem, 7vw, 12rem);
         margin-bottom: -0.88em;
         width: 50%;
     }
@@ -85,7 +86,6 @@
 
     .articleContent p {
         @apply self-end p1;
-        /* width: clamp(90%, 360px, 95%); */
         width: 87%;
         margin-top: 1em;
         margin-bottom: 1em;

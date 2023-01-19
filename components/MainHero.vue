@@ -11,18 +11,19 @@
                 src="/img/portrait.jpeg" />
         </div>
         <div class="heroText self-center">
-            <p class="p1">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Aspernatur nisi sequi optio hic vero incidunt sed explicabo
-                quasi, aperiam natus!
-            </p>
+            <p class="p1">{{ data }}</p>
         </div>
     </section>
 </template>
 
-<script setup></script>
+<script setup>
+    defineProps(['data'])
+</script>
 
 <style scoped>
+    span {
+        background-color: #ad00b0de;
+    }
     .heroContainer {
         margin: clamp(64px, 22vh, 300px) auto 15vw;
         color: #fff;

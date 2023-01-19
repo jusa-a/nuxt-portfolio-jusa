@@ -1,83 +1,44 @@
 <template>
     <section class="aboutContainer flex flex-col justify-around">
-        <div class="spacer bg-transparent"></div>
+        <div class="spacer bg-transparent grow-[3]"></div>
 
-        <div>
+        <div class="grow">
             <p>
-                <span>
-                    Excepteur sint obcaecat cupiditat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.Lorem
-                    ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod
-                    tempor incidunt ut labore et dolore magna aliqua. Ut enim ad
-                    minim veniam, quis nostrud exercitation ullamco laboris nisi
-                    ut aliquid ex ea commodi consequat. Quis aute iure
-                    reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id
-                    est laborum.
-                </span>
+                {{ about.bio }}
             </p>
         </div>
 
-        <div class="flex items-end justify-between">
+        <div class="flex items-end justify-between grow-0">
             <ul class="uppercase">
-                <li>
-                    <a class="link" href="#" target="_blank"><span>CV</span></a>
-                </li>
-                <li>
-                    <a
-                        class="link"
-                        href="https://www.linkedin.com/in/annevirtajusa/"
-                        target="_blank">
-                        <span>LinkedIn</span>
-                    </a>
-                </li>
-                <li>
-                    <a
-                        class="link"
-                        href="https://www.instagram.com/jusa.a/"
-                        target="_blank">
-                        <span>Instagram</span>
-                    </a>
-                </li>
-                <li>
-                    <a
-                        class="link"
-                        href="https://github.com/jusa-a"
-                        target="_blank">
-                        <span>GitHub</span>
+                <li v-for="(link, n) in about.links" :key="n">
+                    <a class="link" :href="link.url" target="_blank">
+                        {{ link.name }}
                     </a>
                 </li>
             </ul>
             <div class="font-serif text-right">
-                <p><span>Jusa Annevirta</span></p>
-                <p><span>jusa.annevirta@aalto.fi</span></p>
-                <p><span>+358 44 252 7741</span></p>
+                <p v-for="(c, n) in about.contact" :key="n">{{ c }}</p>
             </div>
         </div>
     </section>
 </template>
 
-<script setup></script>
+<script setup>
+    const { data: about } = await useAsyncData('about', () =>
+        queryContent('/about').findOne()
+    )
+</script>
 
 <style scoped>
-    .spacer {
-        min-height: 35vh;
-    }
-
     .aboutContainer {
         height: 100vh;
-        width: clamp(30vw, 23rem, 100vw);
+        width: clamp(32vw, 25rem, 97vw);
         position: fixed;
         z-index: 998;
         top: 0;
         right: 0;
-        padding-right: 3em;
+        padding-right: 2em;
         background-color: #5cff1ade;
         padding-left: 0.5em;
     }
-
-    /* span {
-        background-color: #f9f9f9;
-    } */
 </style>

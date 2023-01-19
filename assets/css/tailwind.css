@@ -29,30 +29,34 @@ body {
 }
 
 @layer base {
+    main {
+        margin-bottom: 15vh;
+    }
+
     h1 {
         @apply font-sans uppercase tracking-tight;
-        font-size: clamp(2.5rem, 6vw, 12rem);
+        font-size: clamp(2.8rem, 6vw, 12rem);
         line-height: 1;
         padding-right: 0.025em;
     }
 
     h2 {
         @apply font-sans text-6xl uppercase tracking-tight;
-        font-size: clamp(1.7rem, 4.2vw, 10rem);
+        font-size: clamp(1.9rem, 4.2vw, 10rem);
         line-height: 0.825;
         padding-right: 0.025em;
     }
 
     h3 {
         @apply font-sans uppercase tracking-tight;
-        font-size: clamp(1.3rem, 3.1vw, 7rem);
+        font-size: clamp(1.6rem, 3.1vw, 7rem);
         line-height: 1;
         padding-right: 0.025em;
     }
 
     p {
         @apply font-serif;
-        font-size: clamp(1rem, 1.3vw, 2rem);
+        font-size: clamp(1.1rem, 1.4vw, 2.5rem);
     }
 
     a,
@@ -82,21 +86,32 @@ body {
 }
 
 @layer components {
+    .sectionContainer {
+        padding: 10vw 0 10vw;
+        margin: auto;
+        width: clamp(70%, 500px, 100vw);
+    }
+
+    .sectionDesc {
+        width: clamp(49%, 380px, 100vw);
+        margin: 1em 0 2.5em;
+    }
+
     .h3 {
         @apply font-sans uppercase tracking-tight;
-        font-size: clamp(1.4rem, 3.1vw, 7rem);
+        font-size: clamp(1.6rem, 3.1vw, 7rem);
         line-height: 1;
         padding-right: 0.025em;
     }
 
     .p1 {
-        font-size: clamp(1rem, 1.9vw, 3rem);
+        font-size: clamp(1.2rem, 1.9vw, 3rem);
     }
 
     .link {
         @apply font-light underline;
         text-decoration-thickness: from-font;
-        font-size: clamp(1.2rem, 1.8vw, 3rem);
+        font-size: clamp(1.4rem, 1.9vw, 3rem);
         line-height: 1.2;
         transform: skewX(-10deg);
     }

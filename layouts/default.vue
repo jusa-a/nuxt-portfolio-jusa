@@ -1,11 +1,7 @@
 <template>
-    <div>
-        <MainNav />
-        <main>
-            <slot />
-        </main>
-        <Footer />
-    </div>
+    <MainNav />
+    <main>
+        <slot />
+    </main>
+    <Footer />
 </template>
-
-<style scoped></style>

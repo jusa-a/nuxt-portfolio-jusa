@@ -1,13 +1,10 @@
 <template>
     <div id="projects" class="anchor"></div>
-    <section class="projectsContainer">
+    <section class="sectionContainer">
         <h1 class="text-end">Projects</h1>
-        <div class="projectsDesc">
+        <div class="sectionDesc">
             <p class="p1">
-                Excepteur sint obcaecat cupiditat non proident, sunt in culpa
-                qui officia deserunt mollit anim id est laborum. Lorem ipsum
-                dolor sit amet, consectetur adipisci elit, sed eiusmod tempor
-                incidunt ut labore et dolore magna aliqua.
+                {{ data }}
             </p>
         </div>
 
@@ -51,20 +48,11 @@
     </section>
 </template>
 
-<script setup></script>
+<script setup>
+    defineProps(['data'])
+</script>
 
 <style scoped>
-    .projectsContainer {
-        padding: 10vw 0 10vw;
-        margin: auto;
-        width: clamp(70%, 500px, 100vw);
-    }
-
-    .projectsDesc {
-        width: clamp(49%, 380px, 100vw);
-        margin: 1vw 0 5vw;
-    }
-
     .projectCard:nth-child(odd) {
         @apply flex-row-reverse text-right;
     }

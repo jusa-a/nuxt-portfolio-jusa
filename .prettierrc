@@ -3,6 +3,7 @@
     "semi": false,
     "singleQuote": true,
     "printWidth": 80,
+    "proseWrap": "always",
     "bracketSameLine": true,
     "htmlWhitespaceSensitivity": "ignore",
     "trailingComma": "none",

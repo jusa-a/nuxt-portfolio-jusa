@@ -35,7 +35,8 @@
         "vue/html-indent": ["error", 4],
         "vue/require-default-prop": "off",
         "vue/multi-word-component-names": "off",
-        "vue/require-prop-types": "off"
+        "vue/require-prop-types": "off",
+        "vue/no-multiple-template-root": "off"
 
         /*
         "linebreak-style": ["error", "unix"],
