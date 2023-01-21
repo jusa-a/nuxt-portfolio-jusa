@@ -11,7 +11,6 @@
     const { data } = await useAsyncData('data', () =>
         queryContent('/').findOne()
     )
-    console.log(data)
 </script>
 
 <style scoped></style>

@@ -14,7 +14,7 @@
     if (!article.value) {
         throw createError({
             statusCode: 404,
-            statusMessage: 'Page not found',
+            statusMessage: 'Page Not Found',
             fatal: true
         })
     }

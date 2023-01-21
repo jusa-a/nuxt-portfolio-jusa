@@ -4,31 +4,30 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-    /* --header-size: clamp(4rem, 10vw, 11vw); */
-    --header-size: clamp(10vw, 4.5rem, 17vw);
-}
-
-::selection {
-    background: #5cff1ade;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    background-color: #f9f9f9;
-    color: #353535;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    /* text-rendering: optimizeLegibility; */
-    /* -webkit-font-smoothing: subpixel-antialiased; */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
 @layer base {
+    :root {
+        --header-size: clamp(10vw, 4.5rem, 17vw);
+    }
+
+    ::selection {
+        background: #5cff1ade;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-color: #f9f9f9;
+        color: #353535;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        /* text-rendering: optimizeLegibility; */
+        /* -webkit-font-smoothing: subpixel-antialiased; */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
     main {
         margin-bottom: 15vh;
     }

@@ -31,7 +31,7 @@
 
 <style scoped>
     .aboutContainer {
-        height: 100vh;
+        height: 100%;
         width: clamp(32vw, 25rem, 97vw);
         position: fixed;
         z-index: 998;
