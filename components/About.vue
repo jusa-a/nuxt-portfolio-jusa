@@ -3,8 +3,10 @@
         <div class="spacer bg-transparent grow-[3]"></div>
 
         <div class="grow">
-            <p>
-                {{ about.bio }}
+            <p v-for="(p, n) in about.bio" :key="n">
+                {{ p }}
+                <br />
+                <br />
             </p>
         </div>
 
@@ -38,7 +40,7 @@
         top: 0;
         right: 0;
         padding-right: 2em;
-        background-color: #5cff1ade;
+        background-color: #5bff1aeb;
         padding-left: 0.5em;
     }
 </style>

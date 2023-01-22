@@ -10,7 +10,8 @@
 
         <!-- Render list of all articles in ./content/work using `path` -->
         <ContentList v-slot="{ list }" path="/work">
-            <div class="flex flex-wrap justify-between items-center gap-[4vw]">
+            <div
+                class="worksContainer flex flex-wrap justify-between items-center">
                 <template v-for="work in list" :key="work._path">
                     <NuxtLink :to="work._path" class="workCard">
                         <img
@@ -19,8 +20,7 @@
                             class="workThumb" />
                         <div class="workDetails flex justify-between">
                             <div>
-                                <p
-                                    class="font-sans font-light italic leading-none">
+                                <p class="p2">
                                     {{ work.year }}
                                 </p>
                             </div>
@@ -40,6 +40,11 @@
 </script>
 
 <style scoped>
+    .worksContainer {
+        row-gap: 4vh;
+        column-gap: 1vw;
+    }
+
     .workCard {
         width: clamp(45%, 290px, 100%);
     }

@@ -10,7 +10,7 @@
 
         <!-- Render list of all articles in ./content/project using `path` -->
         <ContentList v-slot="{ list }" path="/project">
-            <div class="flex flex-col gap-[10vw]">
+            <div class="projectsContainer flex flex-col">
                 <template v-for="project in list" :key="project._path">
                     <NuxtLink :to="project._path" class="projectCard flex">
                         <div class="projectThumb">
@@ -20,10 +20,9 @@
                                 class="object-cover w-[100%]" />
                         </div>
                         <div
-                            class="projectDetails flex flex-col justify-between w-min">
+                            class="projectDetails flex flex-col justify-between">
                             <div>
-                                <p
-                                    class="font-sans font-light italic leading-none">
+                                <p class="p2">
                                     {{ project.year }}
                                     <br />
                                     <br />
@@ -37,7 +36,7 @@
                                     </template>
                                 </p>
                             </div>
-                            <h2 class="projectTitle">
+                            <h2 class="projectTitle w-min">
                                 {{ project.title }}
                             </h2>
                         </div>
@@ -53,11 +52,19 @@
 </script>
 
 <style scoped>
+    .projectsContainer {
+        gap: calc(7vw + 10vh);
+    }
+
     .projectCard:nth-child(odd) {
         @apply flex-row-reverse text-right;
     }
 
+    .projectCard:nth-child(odd) .projectTitle {
+        @apply self-end;
+    }
+
     .projectThumb {
-        width: clamp(35vw, 300px, 100%);
+        width: clamp(30vw, 300px, 100%);
     }
 </style>
