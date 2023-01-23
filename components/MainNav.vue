@@ -34,8 +34,8 @@
 
 <style scoped>
     .mainNavContainer {
-        position: -webkit-sticky;
         position: sticky;
+        width: 100%;
         top: 0.1vw;
         z-index: 999;
         overflow: hidden;

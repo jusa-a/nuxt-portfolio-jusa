@@ -60,7 +60,7 @@
     .articleWrapper {
         margin: auto;
         padding-left: 3vw;
-        width: clamp(55%, 450px, 100vw);
+        width: clamp(55%, 450px, 100%);
     }
 
     .articleHero {

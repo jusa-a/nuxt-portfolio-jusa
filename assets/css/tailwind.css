@@ -29,6 +29,7 @@
     }
 
     main {
+        overflow-x: hidden;
         margin-bottom: 15vh;
     }
 
@@ -88,11 +89,11 @@
     .sectionContainer {
         padding: 10vw 0 10vw;
         margin: auto;
-        width: clamp(65%, 500px, 100vw);
+        width: clamp(65%, 500px, 100%);
     }
 
     .sectionDesc {
-        width: clamp(49%, 380px, 100vw);
+        width: clamp(49%, 380px, 100%);
         margin: 1em 0 2.5em;
     }
 

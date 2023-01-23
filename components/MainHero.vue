@@ -26,6 +26,7 @@
     }
     .heroContainer {
         margin: clamp(64px, 22vh, 300px) auto 15vw;
+        max-width: 100%;
         color: #fff;
         font-size: var(--header-size);
     }
