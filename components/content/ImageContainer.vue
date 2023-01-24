@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-wrap justify-between items-start gap-[1em]">
         <template v-for="img in images" :key="img">
-            <img :src="`/${img}`" :alt="img" />
+            <img :src="`/${img}`" :alt="img" loading="lazy" />
         </template>
     </div>
 </template>

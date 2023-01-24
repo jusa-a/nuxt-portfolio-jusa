@@ -17,6 +17,7 @@
                             <img
                                 :src="`/${project.img}`"
                                 :alt="project.title"
+                                loading="lazy"
                                 class="object-cover w-[100%]" />
                         </div>
                         <div

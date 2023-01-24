@@ -17,6 +17,7 @@
                         <img
                             :src="`/${work.img}`"
                             :alt="work.title"
+                            loading="lazy"
                             class="workThumb" />
                         <div class="workDetails flex justify-between">
                             <div>
