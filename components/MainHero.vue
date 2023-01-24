@@ -27,12 +27,13 @@
     .heroContainer {
         margin: clamp(64px, 22vh, 300px) auto 15vw;
         max-width: 100%;
-        color: #fff;
+        color: #c4c4c4;
         font-size: var(--header-size);
     }
 
     .mainHeaderContainer > h1 {
-        mix-blend-mode: difference;
+        color: #cecece;
+        mix-blend-mode: exclusion;
         font-size: inherit;
         line-height: 0.72;
     }

@@ -40,7 +40,7 @@
         z-index: 999;
         overflow: hidden;
         mix-blend-mode: difference;
-        color: #fff;
+        color: #c4c4c4;
     }
 
     .navLink {

@@ -45,7 +45,7 @@
         margin-top: clamp(64px, 17vh, 300px);
     }
     .articleTitle {
-        color: #fff;
+        color: #c4c4c4;
         mix-blend-mode: difference;
         width: clamp(65%, 400px, 100%);
         margin: auto;
