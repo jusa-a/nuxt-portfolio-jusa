@@ -8,8 +8,7 @@
             <img
                 class="aspect-[5/6] shrink-0"
                 src="/img/portrait.jpeg"
-                alt="portrait of me"
-                loading="lazy" />
+                alt="portrait of me" />
         </div>
         <div class="heroText self-center">
             <p class="p1">{{ data }}</p>
