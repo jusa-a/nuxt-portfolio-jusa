@@ -82,7 +82,7 @@
     .articleContent h2,
     .articleContent h3 {
         @apply -tracking-normal;
-        width: 90%;
+        width: 95%;
         margin-top: 2em;
     }
 
