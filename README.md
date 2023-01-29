@@ -1,43 +1,62 @@
 # My Personal Website/Portfolio
 
-A website to introduce myself, my projects and other things I do.
+[www.jusaannevirta.com](https://www.jusaannevirta.com/)
 
-Server Sider Rendering, SEO friendly. Take advantage of static site generator, the data save as markdown, no database needed. Simple and clean design with easy navigation and fast loading speed.
+A website to introduce myself, showcase my projects and other things I do.
+Server Side Rendering, SEO friendly. Take advantage of a static site generator,
+the data save as markdown, and no database is needed. Simple and clean design
+with easy navigation and fast loading speed.
+
+I started this project to learn new web development technologies and redo my old
+portfolio website. Having already experience in React I wanted to learn Vue.js
+so I chose Nuxt3 for my framework. It was also a good chance to try out and
+learn Tailwind CSS.
+
+This project has taught me a lot about web design and development with some of
+the most modern technologies. I have really enjoyed the process of learning and
+building something from scratch!
+
+There are still many things to fix/improve, which I will continue to fix in near
+future.
+
+# Design
+
+Website was designed to be modern and simple yet aesthetic and personal. It has
+some experimental/brutalist elements while keeping in mind a great user
+experience and accessibility.
+
+The responsiveness of the website is made without using any CSS media queries.
+This was possible with flexbox and CSS clamp functions, which resulted in a
+website with beautiful smooth scaling from 300px up.
 
 # Built with
 
--   Nuxt3: Nuxt.js is a framework for creating universal Vue.js applications. It provides a powerful development environment and many features to make building web applications easier.
--   Nuxt Content v2: Module for Nuxt.js that allows to write content in a variety of formats, including Markdown and JSON, and then easily access it in pages and components.
--   Tailwind.css: Utility-first CSS framework that makes it easy to quickly create custom designs with minimal CSS.
--   Prettier and ESLint: Configured to ensure consistent code formatting and prevent common coding errors.
+-   **Nuxt3:** Framework for creating universal Vue.js applications. Provides a
+    powerful development environment and many features to make building web
+    applications easier.
+-   **Nuxt Content v2:** Module for Nuxt.js that allows to write content in a
+    variety of formats, including Markdown, JSON and YAML, and easily access it
+    in pages and components.
+-   **Tailwind CSS:** Utility-first CSS framework that makes it easy to quickly
+    create custom designs with minimal CSS.
+-   **Prettier and ESLint:** Configured to ensure consistent code formatting and
+    prevent common coding errors.
+-   **Netlify:** Website deployed in Netlify
 
-# Technologies
+# Setup
 
--   Code: HTML, CSS, JavaScript
--   Data: Markdown
--   Frontend framework: Vue.js; Nuxt.js
--   UI library: Vuetify
--   Styling: SCSS
--   Deployment: Netlify
-
-# Installation and Usage
-
-1. Clone the repository: `git clone https://github.com/<username>/<repo>.git`
-2. Install the dependencies: `yarn`
-3. Start the development server: `yarn dev`
-4. Open the website in your browser: `http://localhost:3000`
-
-# Customization
-
--   To add new pages, you can create new Vue files in the pages directory.
--   To add new content, you can add new Markdown or JSON files to the content directory.
--   To customize the design, you can edit the Tailwind.css configuration in the tailwind.config.js file.
--   To customize the code formatting, you can edit the Prettier and ESLint configurations in the .prettierrc and .eslintrc files.
-
-# Deployment
-
-1. Build the production version of the website: npm run build or yarn build
-2. Generate the static files: npm run generate or yarn generate
-3. Deploy the contents of the dist directory to your web server.
+```bash
+# clone repository
+$ git clone https://github.com/jusa-a/nuxt-portfolio-jusa.git
+# install dependencies
+$ yarn
+# serve with hot reload at localhost:3000
+$ yarn dev
+# build for production and launch server
+$ yarn build
+$ yarn start
+# generate static project
+$ npm run generate
+```
 
 If you have any questions or feedback, feel free to contact me.
