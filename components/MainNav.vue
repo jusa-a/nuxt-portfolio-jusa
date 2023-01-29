@@ -64,6 +64,7 @@
 
     .linkActive {
         transform: skewX(-10deg);
+        color: #5cff1ade;
     }
 
     .about-enter-active,
