@@ -86,6 +86,12 @@
         margin-top: 2em;
     }
 
+    .articleContent h4 {
+        @apply -tracking-normal self-end;
+        width: clamp(300px, 90%, 1000px);
+        margin-top: 2em;
+    }
+
     .articleContent p {
         @apply self-end;
         width: clamp(300px, 90%, 1000px);
