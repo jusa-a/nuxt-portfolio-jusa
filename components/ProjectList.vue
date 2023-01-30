@@ -22,7 +22,7 @@
                         </div>
                         <div
                             class="projectDetails flex flex-col justify-between">
-                            <div>
+                            <div class="w-max">
                                 <p class="p2">
                                     {{ project.year }}
                                     <br />
@@ -61,8 +61,8 @@
         @apply flex-row-reverse text-right;
     }
 
-    .projectCard:nth-child(odd) .projectTitle {
-        @apply self-end;
+    .projectCard:nth-child(odd) .projectDetails {
+        @apply items-end;
     }
 
     .projectThumb {
