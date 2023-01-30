@@ -10,7 +10,28 @@ export default defineNuxtConfig({
             meta: [
                 {
                     name: 'description',
-                    content: 'Portfolio Jusa'
+                    content: 'Porfolio - Jusa Annevirta'
+                },
+                { hid: 'og:type', property: 'og:type', content: 'website' },
+                {
+                    hid: 'og:title',
+                    property: 'og:title',
+                    content: 'Jusa Annevirta'
+                },
+                {
+                    hid: 'og:desc',
+                    property: 'og:description',
+                    content: 'Porfolio - Jusa Annevirta'
+                },
+                {
+                    hid: 'og:image',
+                    property: 'og:image',
+                    content: 'https://www.jusaannevirta.com/jusaannevirta.jpeg'
+                },
+                {
+                    hid: 'og:url',
+                    property: 'og:url',
+                    content: 'https://www.jusaannevirta.com'
                 }
             ],
             link: [
