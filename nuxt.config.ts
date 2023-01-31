@@ -12,6 +12,7 @@ export default defineNuxtConfig({
                     name: 'description',
                     content: 'Porfolio - Jusa Annevirta'
                 },
+                { name: 'theme-color', content: '#f9f9f9' },
                 { hid: 'og:type', property: 'og:type', content: 'website' },
                 {
                     hid: 'og:title',
