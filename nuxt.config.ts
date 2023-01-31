@@ -44,7 +44,8 @@ export default defineNuxtConfig({
                 },
                 { rel: 'icon', sizes: '32x32', href: '/favicon-32x32.png' },
                 { rel: 'icon', sizes: '16x16', href: '/favicon-16x16.png' },
-                { rel: 'manifest', href: '/site.webmanifest' }
+                { rel: 'manifest', href: '/site.webmanifest' },
+                { rel: 'preload', as: 'image', href: '/img/portrait.jpeg' }
             ],
             htmlAttrs: {
                 lang: 'en'
