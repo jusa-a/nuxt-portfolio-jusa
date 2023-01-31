@@ -9,7 +9,12 @@
         </div>
 
         <!-- Render list of all articles in ./content/project using `path` -->
-        <ContentList v-slot="{ list }" path="/project">
+        <ContentList
+            v-slot="{ list }"
+            path="/project"
+            :query="{
+                only: ['title', 'img', 'year', 'disciplines', '_path']
+            }">
             <div class="projectsContainer flex flex-col">
                 <template v-for="project in list" :key="project._path">
                     <NuxtLink :to="project._path" class="projectCard flex">

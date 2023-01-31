@@ -9,7 +9,12 @@
         </div>
 
         <!-- Render list of all articles in ./content/work using `path` -->
-        <ContentList v-slot="{ list }" path="/work">
+        <ContentList
+            v-slot="{ list }"
+            path="/work"
+            :query="{
+                only: ['title', 'img', 'year', '_path']
+            }">
             <div
                 class="worksContainer flex flex-wrap justify-between items-center">
                 <template v-for="work in list" :key="work._path">

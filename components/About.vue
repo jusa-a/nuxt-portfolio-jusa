@@ -27,7 +27,7 @@
 
 <script setup>
     const { data: about } = await useAsyncData('about', () =>
-        queryContent('/about').findOne()
+        queryContent('/about').only(['bio', 'contact', 'links']).findOne()
     )
 </script>
 

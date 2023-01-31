@@ -9,7 +9,7 @@
 
 <script setup>
     const { data } = await useAsyncData('data', () =>
-        queryContent('/').findOne()
+        queryContent('/').only(['hero', 'projects', 'works']).findOne()
     )
 </script>
 

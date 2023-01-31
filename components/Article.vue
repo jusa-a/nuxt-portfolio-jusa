@@ -1,39 +1,43 @@
 <template>
     <article class="min-h-screen">
-        <div class="articleTitle flex">
-            <h1 class="">{{ article.title }}</h1>
-        </div>
+        <ContentRenderer :value="article">
+            <div class="articleTitle flex">
+                <h1 class="">{{ article.title }}</h1>
+            </div>
 
-        <div class="articleWrapper">
-            <div class="articleHero">
-                <div class="flex flex-row-reverse flex-wrap">
-                    <div class="heroImg">
-                        <img
-                            :src="`/${article.img}`"
-                            :alt="article.title"
-                            loading="lazy"
-                            class="object-cover w-[100%]" />
-                    </div>
+            <div class="articleWrapper">
+                <div class="articleHero">
+                    <div class="flex flex-row-reverse flex-wrap">
+                        <div class="heroImg">
+                            <img
+                                :src="`/${article.img}`"
+                                :alt="article.title"
+                                loading="lazy"
+                                class="object-cover w-[100%]" />
+                        </div>
 
-                    <div
-                        class="articleInfo self-end mr-[1vw] mt-[1vw] text-right">
-                        <p class="p2 whitespace-nowrap">
-                            {{ article.year }}
-                            <br />
-                            <template
-                                v-for="(discipline, n) in article.disciplines"
-                                :key="n">
-                                {{ discipline }}
+                        <div
+                            class="articleInfo self-end mr-[1vw] mt-[1vw] text-right">
+                            <p class="p2 whitespace-nowrap">
+                                {{ article.year }}
                                 <br />
-                            </template>
-                        </p>
+                                <template
+                                    v-for="(
+                                        discipline, n
+                                    ) in article.disciplines"
+                                    :key="n">
+                                    {{ discipline }}
+                                    <br />
+                                </template>
+                            </p>
+                        </div>
                     </div>
                 </div>
+                <section class="articleContent">
+                    <ContentRendererMarkdown :value="article" />
+                </section>
             </div>
-            <section class="articleContent">
-                <ContentRenderer :value="article" />
-            </section>
-        </div>
+        </ContentRenderer>
     </article>
 </template>
 
