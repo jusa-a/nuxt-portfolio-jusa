@@ -26,7 +26,7 @@ export default <RouterConfig>{
         if (to.hash) {
             return new Promise(resolve => {
                 nuxtApp.hook('page:finish', () => {
-                    setTimeout(() => resolve({ el: to.hash }), 10)
+                    resolve({ el: to.hash })
                 })
             })
         }
