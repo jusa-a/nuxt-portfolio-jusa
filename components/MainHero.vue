@@ -8,16 +8,16 @@
             <img
                 class="aspect-[5/6] shrink-0"
                 src="/img/portrait.jpeg"
-                alt="portrait of me" />
+                alt="portrait" />
         </div>
         <div class="heroText self-center">
-            <p class="p1">{{ data }}</p>
+            <p class="p1">{{ content }}</p>
         </div>
     </section>
 </template>
 
 <script setup>
-    defineProps(['data'])
+    defineProps(['content'])
 </script>
 
 <style scoped>

@@ -4,57 +4,49 @@
         <h1 class="text-end">Projects</h1>
         <div class="sectionDesc">
             <p class="p1">
-                {{ data }}
+                {{ content }}
             </p>
         </div>
 
-        <!-- Render list of all articles in ./content/project using `path` -->
-        <ContentList
-            v-slot="{ list }"
-            path="/project"
-            :query="{
-                only: ['title', 'img', 'year', 'disciplines', '_path']
-            }">
-            <div class="projectsContainer flex flex-col">
-                <template v-for="project in list" :key="project._path">
-                    <NuxtLink :to="project._path" class="projectCard flex">
-                        <div class="projectThumb">
-                            <img
-                                :src="`/${project.img}`"
-                                :alt="project.title"
-                                loading="lazy"
-                                class="object-cover w-[100%]" />
-                        </div>
-                        <div
-                            class="projectDetails flex flex-col justify-between">
-                            <div class="w-max">
-                                <p class="p2">
-                                    {{ project.year }}
+        <!-- Render list of all projects -->
+        <div class="projectsContainer flex flex-col">
+            <template v-for="project in projects" :key="project._path">
+                <NuxtLink :to="project._path" class="projectCard flex">
+                    <div class="projectThumb">
+                        <img
+                            :src="`/${project.img}`"
+                            :alt="project.title"
+                            loading="lazy"
+                            class="object-cover w-[100%]" />
+                    </div>
+                    <div class="projectDetails flex flex-col justify-between">
+                        <div class="w-max">
+                            <p class="p2">
+                                {{ project.year }}
+                                <br />
+                                <br />
+                                <template
+                                    v-for="(
+                                        discipline, n
+                                    ) in project.disciplines"
+                                    :key="n">
+                                    {{ discipline }}
                                     <br />
-                                    <br />
-                                    <template
-                                        v-for="(
-                                            discipline, n
-                                        ) in project.disciplines"
-                                        :key="n">
-                                        {{ discipline }}
-                                        <br />
-                                    </template>
-                                </p>
-                            </div>
-                            <h2 class="projectTitle w-min">
-                                {{ project.title }}
-                            </h2>
+                                </template>
+                            </p>
                         </div>
-                    </NuxtLink>
-                </template>
-            </div>
-        </ContentList>
+                        <h2 class="projectTitle w-min">
+                            {{ project.title }}
+                        </h2>
+                    </div>
+                </NuxtLink>
+            </template>
+        </div>
     </section>
 </template>
 
 <script setup>
-    defineProps(['data'])
+    defineProps(['content', 'projects'])
 </script>
 
 <style scoped>
