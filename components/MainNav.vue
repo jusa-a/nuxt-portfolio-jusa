@@ -58,7 +58,6 @@
     }
 
     .navLink:active {
-        transition: font-weight 0.1s ease-in-out;
         font-weight: normal;
     }
 

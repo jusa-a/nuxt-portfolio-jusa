@@ -109,6 +109,10 @@
         transform: skewX(-10deg);
     }
 
+    .articleContent a:active {
+        color: #5cff1ade;
+    }
+
     .articleContent ul,
     .articleContent ol {
         @apply font-serif list-[revert];
