@@ -20,5 +20,8 @@
         "nuxt": "^3.8.0",
         "prettier": "^2.8.3",
         "vue-gtag-next": "^1.14.0"
+    },
+    "dependencies": {
+        "@nuxt/image": "^1.0.0"
     }
 }
