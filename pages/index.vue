@@ -8,30 +8,41 @@
 </template>
 
 <script setup>
-    const content = useState('content')
-    const projects = useState('projects')
-    const works = useState('works')
+    const nuxtApp = useNuxtApp()
 
-    if (!content.value) {
-        const { data } = await useAsyncData('data', () =>
-            queryContent('/').only(['hero', 'projects', 'works']).findOne()
-        )
-        content.value = data.value
-    }
+    const { data: content } = await useAsyncData(
+        'content',
+        () => queryContent('/').only(['hero', 'projects', 'works']).findOne(),
+        {
+            // this will not refetch if the key exists in the payload
+            getCachedData: key =>
+                nuxtApp.static.data[key] || nuxtApp.payload.data[key]
+        }
+    )
 
-    if (!projects.value) {
-        const { data } = await useAsyncData('projects', () =>
+    const { data: projects } = await useAsyncData(
+        'projects',
+        () =>
             queryContent('/project')
                 .only(['title', 'img', 'year', 'disciplines', '_path'])
-                .find()
-        )
-        projects.value = data.value
-    }
+                .find(),
+        {
+            // this will not refetch if the key exists in the payload
+            getCachedData: key =>
+                nuxtApp.static.data[key] || nuxtApp.payload.data[key]
+        }
+    )
 
-    if (!works.value) {
-        const { data } = await useAsyncData('works', () =>
-            queryContent('/work').only(['title', 'img', 'year', '_path']).find()
-        )
-        works.value = data.value
-    }
+    const { data: works } = await useAsyncData(
+        'works',
+        () =>
+            queryContent('/work')
+                .only(['title', 'img', 'year', '_path'])
+                .find(),
+        {
+            // this will not refetch if the key exists in the payload
+            getCachedData: key =>
+                nuxtApp.static.data[key] || nuxtApp.payload.data[key]
+        }
+    )
 </script>
